@@ -139,7 +139,7 @@ public interface IIndentedStringBuilder
     /// </summary>
     /// <param name="action">An action that allows for passing the current builder to another function whilst maintaining
     /// call chaining.</param>
-    public IIndentedStringBuilder AppendLines(Action<IIndentedStringBuilder> action);
+    public IIndentedStringBuilder AppendBlock(Action<IIndentedStringBuilder> action);
 
     /// <summary>
     /// Temporarily indents the builder to append lines, and then return to original <see cref="IndentationLevel"/>.
@@ -153,7 +153,7 @@ public interface IIndentedStringBuilder
     /// </summary>
     /// <param name="action">An action that creates an indented 'scope' for appending lines within.</param>
     /// <param name="amount">The amount to temporarily increment/decrement <see cref="IndentationLevel"/>.</param>
-    public IIndentedStringBuilder IndentAndAppendLines(Action<IIndentedStringBuilder> action, int amount = 1);
+    public IIndentedStringBuilder AppendIndentedBlock(Action<IIndentedStringBuilder> action, int amount = 1);
 
     /// <inheritdoc cref="StringBuilder.Insert(int, bool)"/>
     public IIndentedStringBuilder Insert(int index, bool value);

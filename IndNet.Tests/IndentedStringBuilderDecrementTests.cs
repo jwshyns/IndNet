@@ -19,7 +19,7 @@ public class IndentedStringBuilderDecrementTests
         _sut.IncrementIndentation(startingValue);
 
         // Act
-        var result = _sut.IncrementIndentation(0);
+        var result = _sut.DecrementIndentation(0);
 
         // Assert
         result.IndentationLevel.Should().Be(startingValue);
@@ -54,13 +54,12 @@ public class IndentedStringBuilderDecrementTests
     public void DecrementIndentation_ShouldIncrementIndentationLevel_WhenAmountProvidedIsNegative(int amount)
     {
         // Arrange
-        _sut.IncrementIndentation(Math.Abs(amount));
 
         // Act
-        var result = _sut.IncrementIndentation(amount);
+        var result = _sut.DecrementIndentation(amount);
 
         // Assert
-        result.IndentationLevel.Should().Be(0);
+        result.IndentationLevel.Should().Be(Math.Abs(amount));
     }
 
     [Theory]

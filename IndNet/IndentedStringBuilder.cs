@@ -220,6 +220,11 @@ public class IndentedStringBuilder : IIndentedStringBuilder
 
     public IIndentedStringBuilder AppendLine(string? value)
     {
+        if (value is null)
+        {
+            return AppendLine();
+        }
+        
         _stringBuilder.Append(IndentationString).AppendLine(value);
         return this;
     }
@@ -249,7 +254,7 @@ public class IndentedStringBuilder : IIndentedStringBuilder
         return this;
     }
 
-    public IIndentedStringBuilder AppendLines(Action<IIndentedStringBuilder> action)
+    public IIndentedStringBuilder AppendBlock(Action<IIndentedStringBuilder> action)
     {
         action(this);
         return this;
@@ -260,7 +265,7 @@ public class IndentedStringBuilder : IIndentedStringBuilder
         return IncrementIndentation(amount).AppendLines(values).DecrementIndentation(amount);
     }
 
-    public IIndentedStringBuilder IndentAndAppendLines(Action<IIndentedStringBuilder> action, int amount = 1)
+    public IIndentedStringBuilder AppendIndentedBlock(Action<IIndentedStringBuilder> action, int amount = 1)
     {
         action(IncrementIndentation(amount));
         return DecrementIndentation(amount);
