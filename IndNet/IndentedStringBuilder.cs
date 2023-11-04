@@ -59,7 +59,7 @@ public class IndentedStringBuilder : IIndentedStringBuilder
             return this;
         }
 
-        IndentationLevel += Math.Max(0, IndentationLevel += amount);
+        IndentationLevel = Math.Max(0, IndentationLevel += amount);
         IndentationString = GenerateIndentationString();
         return this;
     }

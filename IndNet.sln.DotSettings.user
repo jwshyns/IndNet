@@ -1,2 +1,29 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer /&gt;</s:String></wpf:ResourceDictionary>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit\2.1.0" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit\2.3.1" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit\2.4.1" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit\2.4.2" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit\2.5.0" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.core\2.1.0" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.core\2.3.1" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.core\2.4.1" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.core\2.4.2" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.core\2.5.0" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.abstractions\2.0.0" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.abstractions\2.0.1" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.abstractions\2.0.3" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.execution\2.1.0" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.execution\2.3.1" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.execution\2.4.1" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.execution\2.4.2" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.execution\2.5.0" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.core\2.1.0" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.core\2.3.1" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.core\2.4.1" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.core\2.4.2" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\joshu\.nuget\packages\xunit.extensibility.core\2.5.0" Loaded="True" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=94dcdc97_002Dba27_002D41fd_002D8433_002D6bf65818f7fe/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="IncrementIndentation_ShouldIncrementAppropriateAmount_WhenRequested" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\joshu\RiderProjects\IndNet\IndNet.Tests" Presentation="&amp;lt;IndNet.Tests&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
