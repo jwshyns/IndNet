@@ -5,6 +5,18 @@ namespace IndNet.Tests;
 public class IndentedStringBuilderTests
 {
     [Fact]
+    public void Ctor_ShouldCorrectlyInstantiate_WhenProvidedProperParameters()
+    {
+        // Arrange
+
+        // Act
+        var result = () => new IndentedStringBuilder();
+
+        // Assert
+        result.Should().NotThrow();
+    }
+    
+    [Fact]
     public void Ctor_ShouldThrow_WhenStartingIndentationLevelIsLessThanZero()
     {
         // Arrange

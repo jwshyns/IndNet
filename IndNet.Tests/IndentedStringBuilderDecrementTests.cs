@@ -22,6 +22,7 @@ public class IndentedStringBuilderDecrementTests
         var result = _sut.DecrementIndentation(0);
 
         // Assert
+        result.Should().Be(_sut);
         result.IndentationLevel.Should().Be(startingValue);
     }
 
@@ -41,6 +42,7 @@ public class IndentedStringBuilderDecrementTests
         var result = _sut.DecrementIndentation(amount);
 
         // Assert
+        result.Should().Be(_sut);
         result.IndentationLevel.Should().Be(0);
     }
 
@@ -59,6 +61,7 @@ public class IndentedStringBuilderDecrementTests
         var result = _sut.DecrementIndentation(amount);
 
         // Assert
+        result.Should().Be(_sut);
         result.IndentationLevel.Should().Be(Math.Abs(amount));
     }
 
@@ -76,6 +79,7 @@ public class IndentedStringBuilderDecrementTests
         var result = _sut.DecrementIndentation(amount);
 
         // Assert
+        result.Should().Be(_sut);
         result.IndentationLevel.Should().Be(0);
     }
 }

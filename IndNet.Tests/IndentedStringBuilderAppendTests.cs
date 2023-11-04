@@ -15,10 +15,11 @@ public class IndentedStringBuilderAppendTests
         var expectedResult = $"    test{Environment.NewLine}";
 
         // Act
-        var result = _sut.AppendLine("test").ToString();
+        var result = _sut.AppendLine("test");
 
         // Assert
-        result.Should().Be(expectedResult);
+        result.Should().Be(_sut);
+        result.ToString().Should().Be(expectedResult);
     }
     
     [Fact]
@@ -30,10 +31,11 @@ public class IndentedStringBuilderAppendTests
         var expectedResult = Environment.NewLine;
 
         // Act
-        var result = _sut.AppendLine(null).ToString();
+        var result = _sut.AppendLine(null);
 
         // Assert
-        result.Should().Be(expectedResult);
+        result.Should().Be(_sut);
+        result.ToString().Should().Be(expectedResult);
     }
 
     [Fact]
@@ -43,10 +45,11 @@ public class IndentedStringBuilderAppendTests
         _sut.IncrementIndentation();
 
         // Act
-        var result = _sut.AppendLine().ToString();
+        var result = _sut.AppendLine();
 
         // Assert
-        result.Should().Be(Environment.NewLine);
+        result.Should().Be(_sut);
+        result.ToString().Should().Be(Environment.NewLine);
     }
     
     [Fact]
@@ -58,10 +61,11 @@ public class IndentedStringBuilderAppendTests
         var expectedResult = $"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}";
 
         // Act
-        var result = _sut.AppendLines(3).ToString();
+        var result = _sut.AppendLines(3);
 
         // Assert
-        result.Should().Be(expectedResult);
+        result.Should().Be(_sut);
+        result.ToString().Should().Be(expectedResult);
     }
     
     [Fact]
@@ -73,10 +77,11 @@ public class IndentedStringBuilderAppendTests
         var expectedResult = string.Empty;
 
         // Act
-        var result = _sut.AppendLines(0).ToString();
+        var result = _sut.AppendLines(0);
 
         // Assert
-        result.Should().Be(expectedResult);
+        result.Should().Be(_sut);
+        result.ToString().Should().Be(expectedResult);
     }
 
     [Fact]
@@ -92,10 +97,11 @@ public class IndentedStringBuilderAppendTests
                               """;
 
         // Act
-        var result = _sut.AppendLines(new[] { "1", "2", "3" }).ToString();
+        var result = _sut.AppendLines(new[] { "1", "2", "3" });
 
         // Assert
-        result.Should().Be(expectedResult);
+        result.Should().Be(_sut);
+        result.ToString().Should().Be(expectedResult);
     }
     
     [Fact]
@@ -117,6 +123,7 @@ public class IndentedStringBuilderAppendTests
         var result = _sut.AppendBlock(action);
 
         // Assert
+        result.Should().Be(_sut);
         result.ToString().Should().Be(expectedResult);
         result.IndentationLevel.Should().Be(0);
     }
@@ -135,6 +142,7 @@ public class IndentedStringBuilderAppendTests
         var result = _sut.IndentAndAppendLines(new[] { "1", "2", "3" });
 
         // Assert
+        result.Should().Be(_sut);
         result.ToString().Should().Be(expectedResult);
         result.IndentationLevel.Should().Be(0);
     }
@@ -158,6 +166,7 @@ public class IndentedStringBuilderAppendTests
         var result = _sut.AppendIndentedBlock(action);
 
         // Assert
+        result.Should().Be(_sut);
         result.ToString().Should().Be(expectedResult);
         result.IndentationLevel.Should().Be(0);
     }
