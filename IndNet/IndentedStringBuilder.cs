@@ -224,7 +224,7 @@ public class IndentedStringBuilder : IIndentedStringBuilder
         {
             return AppendLine();
         }
-        
+
         _stringBuilder.Append(IndentationString).AppendLine(value);
         return this;
     }

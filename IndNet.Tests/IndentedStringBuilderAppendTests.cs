@@ -21,7 +21,7 @@ public class IndentedStringBuilderAppendTests
         result.Should().Be(_sut);
         result.ToString().Should().Be(expectedResult);
     }
-    
+
     [Fact]
     public void AppendLine_ShouldAppendLineWithoutIndentation_WhenValueIsNull()
     {
@@ -51,13 +51,13 @@ public class IndentedStringBuilderAppendTests
         result.Should().Be(_sut);
         result.ToString().Should().Be(Environment.NewLine);
     }
-    
+
     [Fact]
     public void AppendLines_ShouldAppendLinesAtCurrentIndentationLevel_WhenAmountIsProvided()
     {
         // Arrange
         _sut.IncrementIndentation();
-        
+
         var expectedResult = $"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}";
 
         // Act
@@ -67,13 +67,13 @@ public class IndentedStringBuilderAppendTests
         result.Should().Be(_sut);
         result.ToString().Should().Be(expectedResult);
     }
-    
+
     [Fact]
     public void AppendLines_ShouldNotAppendLines_WhenAmountIsZero()
     {
         // Arrange
         _sut.IncrementIndentation();
-        
+
         var expectedResult = string.Empty;
 
         // Act
@@ -103,7 +103,7 @@ public class IndentedStringBuilderAppendTests
         result.Should().Be(_sut);
         result.ToString().Should().Be(expectedResult);
     }
-    
+
     [Fact]
     public void AppendBlock_ShouldAppendLinesAtCurrentIndentationLevel_WhenActionIsProvided()
     {
@@ -114,10 +114,7 @@ public class IndentedStringBuilderAppendTests
                               3{Environment.NewLine}
                               """;
 
-        Action<IIndentedStringBuilder> action = builder =>
-        {
-            builder.AppendLines(new[] { "1", "2", "3" });
-        };
+        Action<IIndentedStringBuilder> action = builder => { builder.AppendLines(new[] { "1", "2", "3" }); };
 
         // Act
         var result = _sut.AppendBlock(action);
@@ -127,9 +124,10 @@ public class IndentedStringBuilderAppendTests
         result.ToString().Should().Be(expectedResult);
         result.IndentationLevel.Should().Be(0);
     }
-    
+
     [Fact]
-    public void IndentAndAppendLines_ShouldAppendLinesAtIncrementedIndentationLevelAndDecrementAfterwards_WhenValuesAreProvided()
+    public void
+        IndentAndAppendLines_ShouldAppendLinesAtIncrementedIndentationLevelAndDecrementAfterwards_WhenValuesAreProvided()
     {
         // Arrange
         var expectedResult = $"""
@@ -146,7 +144,7 @@ public class IndentedStringBuilderAppendTests
         result.ToString().Should().Be(expectedResult);
         result.IndentationLevel.Should().Be(0);
     }
-    
+
     [Fact]
     public void AppendIndentedBlock_ShouldAutomaticallyIncrementedAndDecrementIndentationLevel_WhenActionIsProvided()
     {
@@ -157,10 +155,7 @@ public class IndentedStringBuilderAppendTests
                                   3{Environment.NewLine}
                               """;
 
-        Action<IIndentedStringBuilder> action = builder =>
-        {
-            builder.AppendLines(new[] { "1", "2", "3" });
-        };
+        Action<IIndentedStringBuilder> action = builder => { builder.AppendLines(new[] { "1", "2", "3" }); };
 
         // Act
         var result = _sut.AppendIndentedBlock(action);

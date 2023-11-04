@@ -1,6 +1,4 @@
-﻿using System.Text;
-using FluentAssertions;
-using NSubstitute;
+﻿using FluentAssertions;
 
 namespace IndNet.Tests;
 
@@ -16,10 +14,10 @@ public class IndentedStringBuilderClearTests
         const string contents = "test contents";
         _sut.Append(contents);
         _sut.IncrementIndentation(100);
-        
+
         // Act
         var result = _sut.Clear();
-        
+
         // Assert
         result.Should().Be(_sut);
         result.ToString().Should().Be(string.Empty);
@@ -27,7 +25,7 @@ public class IndentedStringBuilderClearTests
         result.IndentSize.Should().Be(indentSize);
         result.IndentationString.Should().Be(new string(_sut.IndentationChar, 0));
     }
-    
+
     [Fact]
     public void ClearIndentation_ShouldClearIndentation_WhenCalled()
     {
@@ -47,7 +45,7 @@ public class IndentedStringBuilderClearTests
         result.IndentSize.Should().Be(indentSize);
         result.IndentationString.Should().Be(new string(_sut.IndentationChar, 0));
     }
-    
+
     [Fact]
     public void ClearBuilder_ShouldClearUnderlyingStringBuilder_WhenCalled()
     {

@@ -15,7 +15,7 @@ public class IndentedStringBuilderTests
         // Assert
         result.Should().NotThrow();
     }
-    
+
     [Fact]
     public void Ctor_ShouldThrow_WhenStartingIndentationLevelIsLessThanZero()
     {
@@ -30,7 +30,7 @@ public class IndentedStringBuilderTests
             .ThrowExactly<ArgumentException>()
             .WithMessage("Must be greater than or equal to 0. (Parameter 'startingIndentationLevel')");
     }
-    
+
     [Fact]
     public void Ctor_ShouldThrow_WhenIndentSizeIsLessThanOne()
     {

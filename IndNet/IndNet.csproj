@@ -1,10 +1,40 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <PackageId>Jwshyns.IndNet</PackageId>
+        <Authors>Josh Haynes</Authors>
+        <Description>A thin wrapper around StringBuilder to aid in indenting new lines when string building.</Description>
+        <PackageProjectUrl>https://github.com/jwshyns/IndNet</PackageProjectUrl>
+        <PackageTags>string, builder, StringBuilder, IndentedStringBuilder</PackageTags>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
         <TargetFramework>netstandard2.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <MinVerTagPrefix>v</MinVerTagPrefix>
+        <MinVerMinimumMajorMinor>1.0</MinVerMinimumMajorMinor>
+        <EnablePackageValidation>true</EnablePackageValidation>
         <LangVersion>11</LangVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="IndNet.Tests"/>
+        <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="MinVer" Version="4.3.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
 
 </Project>
