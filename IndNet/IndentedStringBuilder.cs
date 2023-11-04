@@ -416,8 +416,7 @@ public class IndentedStringBuilder : IIndentedStringBuilder
 
     public IIndentedStringBuilder ClearIndentation()
     {
-        IndentationLevel = 0;
-        GenerateIndentationString();
+        DecrementIndentation(IndentationLevel);
         return this;
     }
 
