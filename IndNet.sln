@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndNet", "IndNet\IndNet.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndNet.Tests", "IndNet.Tests\IndNet.Tests.csproj", "{4AF63A63-20FA-403D-81EC-11BE9B6626C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndNet.Sample", "IndNet.Sample\IndNet.Sample.csproj", "{3918D923-6A22-4A6D-9D4C-209AA93F462E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{4AF63A63-20FA-403D-81EC-11BE9B6626C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AF63A63-20FA-403D-81EC-11BE9B6626C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AF63A63-20FA-403D-81EC-11BE9B6626C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3918D923-6A22-4A6D-9D4C-209AA93F462E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3918D923-6A22-4A6D-9D4C-209AA93F462E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3918D923-6A22-4A6D-9D4C-209AA93F462E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3918D923-6A22-4A6D-9D4C-209AA93F462E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
