@@ -4,8 +4,22 @@ A thin wrapper around StringBuilder to aid in indenting new lines when string bu
 ___
 
 ## Configuration
-// TODO
-
+### Default constructor
+```csharp
+var isb = new IndentedStringBuilder(indentationChar: '\t', startingIndentationLevel: 0, indentSize: 1, stringBuilder: null);
+```
+#### indentationChar
+- Defaults to `\t`
+- Optionally change the character used for indentation
+#### startingIndentationLevel
+- Defaults to `0`
+- Optionally change the starting indentation level
+#### indentSize
+- Defaults to `1`
+- Optionally change how many characters are used for each indentation level
+#### stringBuilder
+- Defaults to `null`
+- Optionally provide a pre-configured `StringBuilder`
 
 ## Example(s)
 
