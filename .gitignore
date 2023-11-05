@@ -1,2 +1,3 @@
-/IndNet/obj/
-/IndNet/bin/
+/**/obj/
+/**/bin/
+*.sln.DotSettings.user
